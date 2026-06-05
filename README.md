@@ -19,7 +19,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 - **Feature Extraction:** 
   - Bag of Words (baseline: raw word counts)
   - TF-IDF (term frequency weighted by inverse document frequency)
-- **Classification:** k-NN with k=5, cosine similarity distance metric
+- **Classification:** k-NN with k = 5, cosine similarity distance metric
 - **Train/Test Split:** 80/20 stratified split (6,400 train, 1,600 test)
 - **Evaluation Metrics:** Accuracy, precision, recall, F1-score, confusion matrix
 
@@ -47,8 +47,8 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 | Feature Extraction | Model | Accuracy | Precision | Recall | F1-Score |
 |-------------------|-------|----------|-----------|--------|----------|
-| **TF-IDF** | **k-NN (k=5)** | **90.74%** | **90.26%** | **89.27%** | **89.76%** |
-| Bag of Words | k-NN (k=5) | 70.73% | 66.09% | 73.18% | 69.45% |
+| **TF-IDF** | **k-NN (k = 5)** | **90.74%** | **90.26%** | **89.27%** | **89.76%** |
+| Bag of Words | k-NN (k = 5) | 70.73% | 66.09% | 73.18% | 69.45% |
 
 **Confusion Matrix (TF-IDF):**
 - True Positives: 649 | False Positives: 70
@@ -63,11 +63,11 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 **Feature Extraction:**
 - **Bag of Words:** Raw word frequency counts per document
-- **TF-IDF:** TF normalized by max count; IDF = log(N / document_frequency)
+- **TF-IDF:** TF normalized by max count; $\text{TF}(t, d) = \frac{c(t, d)}{\max_i c(i, d)}$ and $\text{IDF}(t) = \log\left(\frac{N}{\text{df}(t)}\right)$
 
 **Classification:**
-- k-NN with cosine similarity: distance = dot product / (magnitude₁ × magnitude₂)
-- Majority voting among k=5 nearest neighbors
+- k-NN with cosine similarity: $\text{similarity}(\mathbf{u}, \mathbf{v}) = \frac{\mathbf{u} \cdot \mathbf{v}}{|\mathbf{u}| \cdot |\mathbf{v}|}$
+- Majority voting among k = 5 nearest neighbors
 
 **Distributed Computing:**
 - Spark RDD operations for parallel data loading and feature extraction
@@ -95,10 +95,10 @@ sbt "run data/spam_Emails_data.csv 7"
 ```
 
 **Parameters:**
-- `dataPath`: Path to email CSV (default: `data/spam_Emails_data.csv`)
-- `k`: Number of neighbors (default: `5`)
-- `sampleSize`: Optional subsample size; `0` = full dataset (default: `0`)
-- `outputPath`: Output file for results (default: `output.txt`)
+- `dataPath`: Path to email CSV (default: data/spam_Emails_data.csv)
+- `k`: Number of neighbors (default: 5)
+- `sampleSize`: Optional subsample size; 0 = full dataset (default: 0)
+- `outputPath`: Output file for results (default: output.txt)
 
 ## Notes
 
