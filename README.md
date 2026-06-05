@@ -1,6 +1,6 @@
 # CSC 369 Final Project: Spark Spam Classifier
 
-**Team:** Arturo Ordaz-Gutierrez
+**Team:** Arturo Ordaz-Gutiérrez
 
 ## Overview
 
@@ -81,25 +81,6 @@ This project builds a distributed email spam classifier using Apache Spark and k
 - sbt (Scala Build Tool)
 - Apache Spark 2.4.8
 
-## Usage
-
-```bash
-# Build
-sbt package
-
-# Run with defaults (k=5, full dataset)
-sbt run
-
-# Run with custom parameters
-sbt "run data/spam_Emails_data.csv 7"
-```
-
-**Parameters:**
-- `dataPath`: Path to email CSV (default: data/spam_Emails_data.csv)
-- `k`: Number of neighbors (default: 5)
-- `sampleSize`: Optional subsample size; 0 = full dataset (default: 0)
-- `outputPath`: Output file for results (default: output.txt)
-
 ## Notes
 
 - **Full dataset:** 193,852 emails from Kaggle with roughly 47% spam and 53% ham
@@ -107,7 +88,3 @@ sbt "run data/spam_Emails_data.csv 7"
 - **Vocabulary:** 76,443 unique terms after preprocessing
 - **Runtime:** ~86 seconds on local machine
 - **Class distribution (sample):** 47% spam, 53% ham
-
-## License
-
-Educational project created for CSC 369 (Big Data Fundamentals).
