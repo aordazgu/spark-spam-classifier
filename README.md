@@ -1,6 +1,4 @@
-# Spark Spam Classifier
-
-**Course:** CSC369 (Big Data Fundamentals)
+# CSC 369 Final Project: Spark Spam Classifier
 
 **Author:** Arturo Ordaz-Gutierrez
 
@@ -110,4 +108,4 @@ sbt "run data/spam_Emails_data.csv 7"
 
 ## License
 
-Educational project created for CSC369 (Big Data Fundamentals).
+Educational project created for CSC 369 (Big Data Fundamentals).
