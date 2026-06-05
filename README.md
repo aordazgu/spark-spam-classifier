@@ -14,7 +14,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 ## Methods
 
-- **Dataset:** [190K Spam-Ham Email Dataset for Classification](https://www.kaggle.com/datasets/meruvulikith/190k-spam-ham-email-dataset-for-classification) from Kaggle, 8,000 emails sampled (3,779 spam, 4,221 ham)
+- **Dataset:** [190K Spam-Ham Email Dataset for Classification](https://www.kaggle.com/datasets/meruvulikith/190k-spam-ham-email-dataset-for-classification) from Kaggle, 193,852 total emails (approximately 91,000 spam, 102,000 ham); 8,000 emails sampled for this analysis (3,779 spam, 4,221 ham)
 - **Preprocessing:** Text cleaning, tokenization, email-specific stopword removal (HTML tags, URLs, web artifacts)
 - **Feature Extraction:** 
   - Bag of Words (baseline: raw word counts)
@@ -102,9 +102,11 @@ sbt "run data/spam_Emails_data.csv 7"
 
 ## Notes
 
+- **Full dataset:** 193,852 emails from Kaggle with roughly 47% spam and 53% ham
+- **Sample analyzed:** 8,000 emails (3,779 spam, 4,221 ham) with 80/20 train/test split
 - **Vocabulary:** 76,443 unique terms after preprocessing
 - **Runtime:** ~86 seconds on local machine
-- **Class distribution:** 47% spam, 53% ham
+- **Class distribution (sample):** 47% spam, 53% ham
 
 ## License
 
