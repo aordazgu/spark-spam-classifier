@@ -1,10 +1,12 @@
 # Spark Spam Classifier
 
+**Course:** CSC369 (Big Data Fundamentals)
+
 **Author:** Arturo Ordaz-Gutierrez
 
 ## Overview
 
-This project builds a distributed email spam classifier using Apache Spark and k-NN in Scala. It compares two text feature extraction approaches—Bag of Words and TF-IDF—on a dataset of 8,000 real emails to determine which representation better captures spam-indicative patterns. The system demonstrates practical applications of distributed computing, NLP preprocessing, and machine learning evaluation.
+This project builds a distributed email spam classifier using Apache Spark and k-NN in Scala. It compares two text feature extraction approaches, Bag of Words and TF-IDF, on a dataset of 8,000 real emails to determine which representation better captures spam-indicative patterns. The system demonstrates practical applications of distributed computing, NLP preprocessing, and machine learning evaluation.
 
 ## Research Question
 
@@ -25,7 +27,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 ## Key Findings
 
-- **TF-IDF significantly outperforms Bag of Words:** 90.74% vs 70.73% accuracy—a 20-point improvement
+- **TF-IDF significantly outperforms Bag of Words:** 90.74% vs 70.73% accuracy, a 20-point improvement
 - **TF-IDF provides superior precision and recall:** 90.26% precision and 89.27% recall vs 66.09% and 73.18% respectively
 - **Feature engineering matters:** IDF weighting effectively down-ranks common terms (the, is, and) and amplifies discriminative spam indicators (viagra, click here, urgent)
 - **Distributed approach scales:** Broadcast variables and partition-level caching enable efficient processing across clusters
@@ -34,7 +36,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 | File | Purpose |
 |------|---------|
-| `src/main/scala/SpamClassifier.scala` | Main entry point; orchestrates pipeline: load → preprocess → vectorize → classify → evaluate |
+| `src/main/scala/SpamClassifier.scala` | Main entry point; orchestrates pipeline: load > preprocess > vectorize > classify > evaluate |
 | `src/main/scala/Preprocessing.scala` | CSV parsing, text cleaning, tokenization, 80/20 train/test split |
 | `src/main/scala/BagOfWords.scala` | Bag of Words feature extraction (word count vectors) |
 | `src/main/scala/TFIDF.scala` | TF-IDF vectorization with distributed IDF computation |
