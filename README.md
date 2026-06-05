@@ -14,7 +14,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 
 ## Methods
 
-- **Dataset:** [190K Spam-Ham Email Dataset for Classification](https://www.kaggle.com/datasets/meruvulikith/190k-spam-ham-email-dataset-for-classification) from Kaggle, 193,852 total emails (approximately 91,000 spam, 102,000 ham); 8,000 emails sampled for this analysis (3,779 spam, 4,221 ham)
+- **Dataset:** [190K Spam-Ham Email Dataset for Classification](https://www.kaggle.com/datasets/meruvulikith/190k-spam-ham-email-dataset-for-classification) from Kaggle, 190,000+ total emails (approximately 91,000 spam, 102,000 ham); 8,000 emails sampled for this analysis (3,779 spam, 4,221 ham)
 - **Preprocessing:** Text cleaning, tokenization, email-specific stopword removal (HTML tags, URLs, web artifacts)
 - **Feature Extraction:** 
   - Bag of Words (baseline: raw word counts)
@@ -41,7 +41,7 @@ This project builds a distributed email spam classifier using Apache Spark and k
 | `src/main/scala/KNN.scala` | k-NN classifier with cosine similarity distance metric |
 | `src/main/scala/Evaluation.scala` | Metrics computation: accuracy, precision, recall, F1, confusion matrix |
 | `build.sbt` | Scala build configuration; declares Spark dependency |
-| `data/spam_Emails_data.csv` | Dataset: 8,000 labeled emails |
+| `data/spam_Emails_data.csv` | Dataset: 190,000+ labeled emails |
 
 ## Results
 
